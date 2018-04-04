@@ -56,7 +56,6 @@ public static void perm(int m, int[] p){
                         mi = 1;
                 }
         }
-
 }
 public static void main(String[] args) {
         Scanner in = new Scanner(System.in);

@@ -1,0 +1,25 @@
+procedure B(m,i);
+begin
+  if (m mod 2 = 0) and (m > 2) then
+    if i < m - 1 then B := i
+    else B := m - 2
+  else B := m - 1
+end; (* B *)
+
+procedure PERM(m);
+(* tablica P jest globalna *)
+begin
+  i = 0, mi = 1
+  for mi := 1 to m
+    tab[mi] = 1 (* wszystkie elementy tablicy tab przyjmują wartość 1 *)
+  while i < m!
+    if tab[mi] == mi
+      if tab[mi] = 1 and mi = 1 then (* P[1], ... ,P[n] jest nową permutacją *)
+        i += 1
+        write (P[1], ... ,P[n])
+      mi += 1
+    if tab[mi] < mi then
+      P[B(mi,i)] :=: P[mi]
+      tab[mi] += 1
+      mi = 1
+end;
