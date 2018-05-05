@@ -8,7 +8,7 @@ public class Main {
 
 public static void algorytm(int n, int positions){
         int[] tablica = new int[positions];
-        int difference, j = 1;
+        int difference, a = 0, b = 1;
         boolean bool = false;
         // wypełniamy tablicę jedynkami
         for (int i = 0; i < positions; i++) {
@@ -20,21 +20,22 @@ public static void algorytm(int n, int positions){
                 for (int i = 0; i < positions; i++) {
                         System.out.print(tablica[i]);
                         if (i < positions - 1) {
-                          System.out.print(" + ");
+                                System.out.print(" + ");
                         }
                 }
                 System.out.println(" = " + n);
-                // if (difference > 1) {
-                //         while (bool = false) {
-                //                 while(tablica.length > 1 && tablica[j] > tablica[j+1]) {
-                //                         tablica[0] -= 1;
-                //                         tablica[j+1] += 1;
-                //                         if (j < tablica.length - 1) {
-                //                           j += 1;
-                //                         }
-                //                 }
-                //         }
-                // }
+                if (difference > 1) {
+                        if (tablica[a] != tablica[b] && b < positions-1  ) {
+                                tablica[b] += 1;
+                                tablica[a] -= 1;
+                        }
+                        for (int i = 0; i < positions; i++) {
+                                System.out.print(tablica[i]);
+                                if (i < positions - 1) {
+                                        System.out.print(" + ");
+                                }
+                        }
+                }
                 if (positions > 1) {
                         algorytm(n,positions-1);
                 }
@@ -42,7 +43,7 @@ public static void algorytm(int n, int positions){
                 for (int i = 0; i < positions; i++) {
                         System.out.print(tablica[i]);
                         if (i < positions - 1) {
-                          System.out.print(" + ");
+                                System.out.print(" + ");
                         }
                 }
                 System.out.println(" = " + n);
